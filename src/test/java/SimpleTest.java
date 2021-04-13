@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.hamcrest.Matchers.is;
 public class SimpleTest {
   @Test
+  @Tag("positive")
   void successtest() {
    assertEquals(true,true);
   }
@@ -17,6 +19,7 @@ public class SimpleTest {
   }
 
   @Test
+  @Tag("positive")
   void successWithHamcrestTest() {
     assertThat(true, is(true));
   }
@@ -27,6 +30,7 @@ public class SimpleTest {
   }
 
   @Test
+  @Tag("positive")
   @DisplayName("Some positive test")
   void successWithHamcrestTestAndSteps() {
     step("Assert that true is true",() ->
