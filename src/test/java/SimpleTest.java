@@ -30,13 +30,13 @@ public class SimpleTest {
   @DisplayName("Some positive test")
   void successWithHamcrestTestAndSteps() {
     step("Assert that true is true",() ->
-    assertThat(true, is(true));
+    assertThat(true, is(true)));
   }
 
   @Test
   @DisplayName("Some negative test")
   void failedWithHamcrestTestAndSteps() {
     step("Assert that true is false",() ->
-    assertThat(true, is(false));
+    assertThat(true, is(false)));
   }
 }
