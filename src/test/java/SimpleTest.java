@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -21,6 +22,18 @@ public class SimpleTest {
 
   @Test
   void failedWithHamcrestTest() {
-    assertThat(true, is(false);
+    assertThat(true, is(false));
+  }
+
+  @Test
+  @DisplayName("Some positive test")
+  void successWithHamcrestTestAndSteps() {
+    assertThat(true, is(true));
+  }
+
+  @Test
+  @DisplayName("Some negative test")
+  void failedWithHamcrestTestAndSteps() {
+    assertThat(true, is(false));
   }
 }
